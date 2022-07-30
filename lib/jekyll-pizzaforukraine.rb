@@ -1,6 +1,6 @@
 require "jekyll"
 require "jekyll-pizzaforukraine/version"
-class pizzaforukraineEmbed < Liquid::Tag
+class PizzaForUkraineEmbed < Liquid::Tag
 
   def initialize(tagName, content, tokens)
     super
