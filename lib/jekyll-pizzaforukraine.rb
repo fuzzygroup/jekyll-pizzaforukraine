@@ -19,18 +19,23 @@ class PizzaForUkraineEmbed < Liquid::Tag
       site = context.registers[:site]
       tmpl = (Liquid::Template.parse tmpl).render site.site_payload.merge!({"youtube_id" => @youtube_id})
     else
+      # %Q{
+      #   {:.center}![Pizza](#{ @random_picture_url })
+      #   {:.center}
+      #   Pizza courtesy of Pizza for Ukraine!
+      #   {:.center}
+      #   [Donate Now to Pizza for Ukraine](https://www.pizzaforukraine.com/)
+      # }
+      
+
+
       %Q{
-        {:.center}![Pizza](#{ @random_picture_url })
-
-        {:.center}
-        Pizza courtesy of Pizza for Ukraine!
-
-        {:.center}
-        [Donate Now to Pizza for Ukraine](https://www.pizzaforukraine.com/)
-      
+{:.center}<img src="#{ @random_picture_url }" height="50%" width="50%">
+{:.center}
+Pizza courtesy of Pizza for Ukraine!
+{:.center}
+[Donate Now to Pizza for Ukraine](https://www.pizzaforukraine.com/)
       }
-      
-
     end
   end
 
