@@ -31,7 +31,7 @@ class PizzaForUkraineEmbed < Liquid::Tag
       
 
 
-      %Q{<img style="display: block; margin-left: auto; margin-right: auto; width: 50%; height: 50%" src="#{ @random_picture_url }">
+      %Q{<img style="display: block; margin-left: auto; margin-right: auto; width: 75%; height: 75%" src="#{ @random_picture_url }">
 
 {:.center}
 Pizza courtesy of Pizza for Ukraine!
@@ -39,7 +39,7 @@ Pizza courtesy of Pizza for Ukraine!
 {:.center}
 [Donate Now to Pizza for Ukraine](https://www.pizzaforukraine.com/)
 
-
+<p>&nbsp;</p>
       }
     end
   end
